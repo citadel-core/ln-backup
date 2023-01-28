@@ -13,7 +13,7 @@ jobs:
           docker_layer_caching: false
       - run: docker login -u "$DOCKERHUB_USER_NAME" -p "$DOCKERHUB_ACCESS_TOKEN"
       - run: |
-          docker buildx build --push --platform linux/arm64,linux/amd64 --tag ${DOCKERHUB_CONTAINER_NAMESPACE}/ln-manager:${CIRCLE_TAG:-$CIRCLE_BRANCH} .
+          docker buildx build --push --platform linux/arm64,linux/amd64 --tag ${DOCKERHUB_CONTAINER_NAMESPACE}/ln-backups:${CIRCLE_TAG:-$CIRCLE_BRANCH} .
 
 workflows:
   docker-deployment:
