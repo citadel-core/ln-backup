@@ -24,8 +24,6 @@ check_dependencies () {
 
 check_dependencies tar gpg shuf curl
 
-BITCOIN_NETWORK=${BITCOIN_NETWORK:-mainnet}
-
 echo "Creating backup..."
 
 if [[ ! -f "${CITADEL_ROOT}/lnd/data/chain/bitcoin/main/channel.backup" ]]; then
