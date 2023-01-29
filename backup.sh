@@ -71,7 +71,7 @@ upload_file() {
     "https://account.runcitadel.space/api/upload" \
     -d "${upload_data}" \
     -H "Content-Type: application/json" \
-    --socks5 "localhost:${TOR_PROXY_PORT}" \
+    --socks5 "${TOR_PROXY_IP}:${TOR_PROXY_PORT}" \
     > /dev/null
 }
 
