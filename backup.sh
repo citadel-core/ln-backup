@@ -33,7 +33,7 @@ fi
 
 mkdir -p "${BACKUP_FOLDER_PATH}"
 
-cp --archive "lnd/data/chain/bitcoin/mainnet/channel.backup" "${BACKUP_FOLDER_PATH}/channel.backup"
+cp --archive "/lnd/data/chain/bitcoin/mainnet/channel.backup" "${BACKUP_FOLDER_PATH}/channel.backup"
 
 echo "Adding random padding..."
 
