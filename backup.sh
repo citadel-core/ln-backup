@@ -26,7 +26,7 @@ check_dependencies tar gpg shuf curl
 
 echo "Creating backup..."
 
-if [[ ! -f "${CITADEL_ROOT}/lnd/data/chain/bitcoin/main/channel.backup" ]]; then
+if [[ ! -f "/lnd/data/chain/bitcoin/main/channel.backup" ]]; then
     echo "No channel.backup file found, skipping backup..."
     exit 1
 fi
@@ -75,4 +75,4 @@ upload_file() {
     > /dev/null
 }
 
-upload_file "${BACKUP_FILE}" "${backup_id}"
+upload_file "${BACKUP_FILE}" "${BACKUP_ID}"
