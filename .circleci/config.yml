@@ -3,8 +3,7 @@ version: 2.1
 jobs:
   build-push:
     machine:
-      image: 'ubuntu-2004:202010-01'
-    resource_class: small
+      image: "ubuntu-2204:2022.10.2"
     steps:
       - checkout
       - run:
