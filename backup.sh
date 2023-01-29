@@ -26,14 +26,14 @@ check_dependencies tar gpg shuf curl
 
 echo "Creating backup..."
 
-if [[ ! -f "/lnd/data/chain/bitcoin/main/channel.backup" ]]; then
+if [[ ! -f "/lnd/data/chain/bitcoin/mainnet/channel.backup" ]]; then
     echo "No channel.backup file found, skipping backup..."
     exit 1
 fi
 
 mkdir -p "${BACKUP_FOLDER_PATH}"
 
-cp --archive "lnd/data/chain/bitcoin/main/channel.backup" "${BACKUP_FOLDER_PATH}/channel.backup"
+cp --archive "lnd/data/chain/bitcoin/mainnet/channel.backup" "${BACKUP_FOLDER_PATH}/channel.backup"
 
 echo "Adding random padding..."
 
