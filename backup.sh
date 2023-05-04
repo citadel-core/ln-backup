@@ -50,7 +50,6 @@ echo "Creating encrypted tarball..."
 tar \
   --create \
   --gzip \
-  --verbose \
   --directory "${BACKUP_FOLDER_PATH}/.." \
   "${BACKUP_FOLDER_NAME}" \
   | gpg \
